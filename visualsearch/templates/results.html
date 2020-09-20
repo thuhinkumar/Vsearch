@@ -1,0 +1,11 @@
+{% block content %}
+
+<h2>Results</h2>
+  {% csrf_token %}
+
+{% for key, value in display.items %}
+    <img src='{{value}}'> <br>    
+    <h5><a href="{{key}}"> {{key}} </a></h5>
+{% endfor %}
+
+{% endblock %}
